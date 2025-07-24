@@ -1,16 +1,16 @@
-# Base image (OS)
+# Get base image from Python-3.9
 
-FROM python:3.9-slim
+FROM python:3.9
 
 # Working directory
 
 WORKDIR /app
 
-# Copy src code to container
+# Copy the source code to the workdir in container
 
 COPY . .
 
-# Run the build commands
+# Install all the required dependencies
 
 RUN pip install -r requirements.txt
 
